@@ -6,11 +6,35 @@
 
     <groupId>org.techpleiad.exploration</groupId>
     <artifactId>reactive-java</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>reactor-core-exploration</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
+        <version.projectreactor.bom>2020.0.19</version.projectreactor.bom>
     </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- https://mvnrepository.com/artifact/io.projectreactor/reactor-bom -->
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-bom</artifactId>
+                <version>2020.0.19</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
 
 </project>
